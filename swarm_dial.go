@@ -351,7 +351,7 @@ func (s *Swarm) dialAddr(ctx context.Context, p peer.ID, addr ma.Multiaddr) (ico
 		return nil, fmt.Errorf("%s --> %s dial attempt failed: %s", s.local, p, err)
 	}
 
-	fmt.Println("*** GAURAV LOG ****dialing to peer")
+	log.Info("*** GAURAV LOG ****dialing to peer")
 	// if the connection is not to whom we thought it would be...
 	remotep := connC.RemotePeer()
 	if remotep != p {
